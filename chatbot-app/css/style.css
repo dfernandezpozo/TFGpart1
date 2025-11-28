@@ -1,0 +1,185 @@
+/* ---------- Reset general ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- HTML y Body ---------- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(circle at top left, #0f172a, #020617);
+  color: #333;
+  display: flex;
+  justify-content: center; /* centra horizontalmente el chat */
+  align-items: flex-start; /* chat empieza desde arriba */
+}
+
+/* ---------- Canvas Background ---------- */
+canvas#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---------- Auth Pages ---------- */
+.auth-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+#register {
+  padding-top: 1.5vh;
+}
+
+.auth-container h1 {
+  margin-bottom: 1.5rem;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-container input {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.auth-container button {
+  padding: 0.8rem;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-container button:hover {
+  background: #4338ca;
+}
+
+.auth-container a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+#login {
+  padding-top: 5%;
+}
+
+/* ---------- Chat Page ---------- */
+
+#body-chat {
+  padding-top: 3%;
+  background: #0f172a; /* color base oscuro */
+  background-image: linear-gradient(
+      90deg,
+      rgba(74, 8, 230, 0.418) 1px,
+      transparent 2px
+    ),
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px; /* tamaño de la cuadrícula */
+}
+.chat-container {
+  width: 400px;
+  height: 80vh;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem; /* separación desde el top */
+  z-index: 1; /* encima del canvas */
+}
+
+.chat-container header {
+  background: #4f46e5;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  scroll-behavior: smooth;
+}
+
+.bot-message,
+.user-message {
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  max-width: 80%;
+}
+
+.bot-message {
+  background: #f3f4f6;
+  align-self: flex-start;
+}
+
+.user-message {
+  background: #4f46e5;
+  color: white;
+  align-self: flex-end;
+}
+
+#chatForm {
+  display: flex;
+  border-top: 1px solid #eee;
+}
+
+#userInput {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  outline: none;
+}
+
+#chatForm button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 0 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#chatForm button:hover {
+  background: #4338ca;
+}
+
+#logoutBtn{
+  width: 7%;
+  height: 80%;
+}
