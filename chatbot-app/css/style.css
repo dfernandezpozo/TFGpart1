@@ -1,4 +1,4 @@
-/* ---------- Reset general ---------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* ---------- HTML y Body ---------- */
+
 html,
 body {
   margin: 0;
@@ -21,7 +21,7 @@ body {
   align-items: flex-start; /* chat empieza desde arriba */
 }
 
-/* ---------- Canvas Background ---------- */
+
 canvas#bg {
   position: fixed;
   top: 0;
@@ -32,7 +32,7 @@ canvas#bg {
   pointer-events: none;
 }
 
-/* ---------- Auth Pages ---------- */
+
 .auth-container {
   position: absolute;
   top: 50%;
@@ -91,7 +91,7 @@ canvas#bg {
   padding-top: 5%;
 }
 
-/* ---------- Chat Page ---------- */
+
 
 #body-chat {
   padding-top: 3%;
@@ -183,3 +183,4 @@ canvas#bg {
   width: 7%;
   height: 80%;
 }
+
